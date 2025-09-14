@@ -91,7 +91,7 @@ namespace _1.VytvorteTriduFilm
 
         public override string ToString()
         {
-            return $"{Nazev} ({RokVzniku}; {PrijmeniRezisera}, {JmenoRezisera[0]}): {Hodnoceni}";
+            return $"{Nazev} ({RokVzniku}; {PrijmeniRezisera}, {JmenoRezisera[0]}): {Hodnoceni} ⭐";
         }
     }
 }
