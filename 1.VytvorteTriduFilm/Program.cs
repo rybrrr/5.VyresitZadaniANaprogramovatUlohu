@@ -38,6 +38,17 @@ namespace _1.VytvorteTriduFilm
                     filmSNejdelsimNazvem = film;
             }
 
+            Console.WriteLine($"Nejlepsi film: {nejlepsiFilm.Nazev}");
+            Console.WriteLine($"Film s nejdelsim nazvem: {filmSNejdelsimNazvem.Nazev}");
+
+            foreach (Film film in films)
+            {
+                if (film.Hodnoceni < 3)
+                    Console.WriteLine($"{film.Nazev} je odpad! Má hodnocení jen {film.Hodnoceni}.");
+            }
+
+            foreach (Film film in films)
+                Console.WriteLine(film.ToString());
         }
     }
 
@@ -67,7 +78,7 @@ namespace _1.VytvorteTriduFilm
             int sum = ListHodnoceni.Sum(x => x);
             int pocet = ListHodnoceni.Count;
 
-            Hodnoceni = sum / pocet;
+            Hodnoceni = (double) sum / pocet;
         }
 
         public void VypisVsechHodnoceni()
